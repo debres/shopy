@@ -1,0 +1,31 @@
+import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import Header from './Components/Header/Header';
+import Fotter from './Components/Fotter/Fotter';
+import NewArrivals from './Containers/NewArrivals/NewArrivals';
+import BestSales from './Containers/BestSales/BestSales';
+import Subscribe from './Components/Subscribe/Subscribe';
+//import Contact from './Containers/Contact/Contact';
+//import About from './Containers/About/About';
+
+
+export default class Shopy extends Component {
+  render() {
+    return (
+        <BrowserRouter>
+          <div>
+            <Header />
+              <main>
+                <Route path="/" exact component={NewArrivals} />
+                <Route path="/" exact component={BestSales} />
+                <Route path="/" exact component={Subscribe} />
+                <Route path="/about" render={() => <h1>About us!</h1>} />
+                <Route path="/contact" render={() => <h1>Contact us: info@shopy.com or 996 - 5553 - 453</h1>} />
+              </main>
+            <Fotter />
+          </div>
+        </BrowserRouter>
+    );
+  }
+}

@@ -1,0 +1,30 @@
+.productShow {
+  padding-top: 80px;
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+}
+
+.productContainer {
+
+}
+
+.productDescription {
+  border-bottom: 1px solid #edeff1;
+}
+
+.productTitleMain {
+  color: #ff5912;
+  font-size: 52px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.titleDescription {
+  color: #3c4751;
+  font-family: "Harmonia Sans Pro Cyr - Semi Bd";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29.97px;
+}

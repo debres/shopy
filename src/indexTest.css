@@ -1,0 +1,170 @@
+
+/*header section*/
+.smallHeader {
+  min-height: 60px;
+}
+
+.smallHeader span {
+	margin-left: 10px;
+	margin-right: 20px;
+}
+
+.socials {
+	width: 90px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.bigHeader {
+	min-height: 120px;
+}
+
+.decorContainer {
+	width: 650px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+  color: #46505a;
+}
+
+.logo span {
+	color: #34404b;
+	font: normal normal 400 30px;
+	text-transform: uppercase;
+}
+
+.logo p {
+	text-align: center;
+}
+
+.mainNav {
+	width: 500px;
+	min-height: 16px;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.mainNav ul {
+	margin: 0 auto;
+	display: flex;
+  justify-content: space-around;
+	list-style-type: none;
+	text-transform: capitalize;
+}
+/*slider block*/
+.slideAdv {
+	min-height: 650px;
+	background-color: #f4f6f8;
+	background-image: url('./Img/winterKit.jpg');
+	background-repeat: no-repeat;
+  margin-bottom: 120px;
+}
+
+.slideArticleAdv {
+	width: 520px;
+	min-height: 190px;
+}
+
+.slideArticleAdv h1 {
+	color: #ff5912;
+	font-size: 52px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.slideArticleAdv h2 {
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.slideArticleAdv p {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.slideArticleAdv h2, p {
+	line-height: 30px;
+}
+
+.advDecorContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.orderBtn {
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.orderBtn p {
+	color: #ff5912;
+	text-transform: capitalize;
+}
+
+/*Section heder*/
+.sectionSlogan h1 {
+	font: normal normal 400 36px/17px;
+	text-transform: uppercase;
+}
+
+/*Product block*/
+.singleProduct {
+	width: 270px;
+	min-height: 365px;
+	box-sizing: border-box;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	background-color: #ffffff;
+	display: flex;
+	justify-content: space-around;
+	flex-flow: column nowrap;
+	text-align: center;
+}
+
+/*UI block*/
+.loadMore {
+	width: 100%;
+	min-height: 60px;
+	background-color: #ffffff;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.loadMore:active {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.advLeft {
+	width: 670px;
+}
+
+.advRight {
+	width: 470px;
+}
+
+.advLeft,
+.advRight {
+	min-height: 100px;
+	box-sizing: border-box;
+	background-color: #ffffff;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.subscribeForm {
+	width: 1170px;
+	min-height: 125px;
+	background-color: #ffffff;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.subscribeDecorContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/*footer block*/

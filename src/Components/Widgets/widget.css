@@ -1,0 +1,27 @@
+.widgetContainer {
+  margin-bottom: 30px;
+  width: 270px;
+  min-height: 300px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.widgetDecorContainer {
+  margin: 40px;
+}
+
+.itemDecorContainer {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.widgetTitle {
+  margin-bottom: 40px;
+  color: #ff5912;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.iputItem {
+  margin-bottom: 40px;
+}
