@@ -13,10 +13,8 @@ const singleProduct = good => {
               <figcaption className="productImg">
                 <img src={thumbnail} alt="randomProductsThumbnail" />
               </figcaption>
-              <hgroup>
-                <h1 className="productTitle">Reebok Track Jacket</h1>
+                <h2 className="productTitle">Reebok Track Jacket</h2>
                 <p className="productPrice">$100</p>
-              </hgroup>
               <section className="productHover">
                   <div className="productVariations">
                     <p>sizes: s - m - l - xl</p>

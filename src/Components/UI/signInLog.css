@@ -7,20 +7,35 @@
   flex-flow: column nowrap;
 }
 
-.formInput {
-  margin-bottom: 30px;
-  width: 100%;
+.submitBtn {
+  width: 100px;
+  height: 50px;
+  border: 0;
+  color: #ffffff;
+  background-color: #ff5912;
 }
 
-.formInput label {
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 5px;
+.visuallyHidden {
+  visibility: hidden;
 }
 
-.formInput input {
+.loginCheckbox {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
 }
 
-.formInput p {
-  text-align: right;
+.loginCheckbox input[type="checkbox"] + .checkboxIndicator {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+}
+
+.loginCheckbox input[type="checkbox"]:checked + .checkboxIndicator {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border: 4px solid #ff5912;
 }

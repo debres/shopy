@@ -1,13 +1,19 @@
 import React from 'react';
 
+import './signInLog.css';
+
 const subscribe = () => {
   return (
     <section className="container">
       <form className="subscribeForm">
-        <h1 className="">news letter</h1>
-        <p>join us now to get all news and special offers</p>
-        <input type="search" onChange={()=>{}} placeholder="type your email here" />
-        <button onSubmit={()=>{}}>join</button>
+        <hgroup>
+          <h2 className="">news letter</h2>
+          <h3>join us now to get all news and special offers</h3>
+        </hgroup>
+        <p>
+          <input className="inputField" type="search" onChange={()=>{}} placeholder="type your email here" />
+          <button className="submitBtn" onSubmit={()=>{}}>join us</button>
+        </p>
       </form>
     </section>
   );
