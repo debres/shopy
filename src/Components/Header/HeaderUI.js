@@ -1,26 +1,31 @@
 import React, { Fragment } from 'react';
 
 import RenderChildren from '../UI/RenderChildren';
-import Modal from '../UI/Modal';
+//import Modal from '../UI/Modal';
 import Tabs from '../UI/Tabs';
-
-import search from '../../Img/search.svg';
-import user from '../../Img/user.svg';
-import cart from '../../Img/cart.ico';
 
 const headerUI = () => {
   return (<div>
             <RenderChildren>{({load, showMore})=>(<Fragment>
                   {load && <input  value="search for goods"/>}
-                  <img src={search} onClick={showMore} alt="search"/></Fragment>)}
+                  <button onClick={showMore}>
+                    <span className="icoBtn"></span>
+                    search
+                  </button></Fragment>)}
             </RenderChildren>
             <RenderChildren>{({load, showMore})=>(<Fragment>
                   {load && <Tabs />}
-                  <img src={user} onClick={showMore} alt="search"/></Fragment>)}
+                  <button onClick={showMore}>
+                    <span className="icoBtn"></span>
+                    user suite
+                  </button></Fragment>)}
             </RenderChildren>
             <RenderChildren>{({load, showMore})=>(<Fragment>
                   {load && <div>Order dropdown</div>}
-                  <img src={cart} onClick={showMore} alt="search"/></Fragment>)}
+                  <button onClick={showMore}>
+                    <span className="icoBtn"></span>
+                    cart
+                  </button></Fragment>)}
             </RenderChildren>
           </div>);
 }

@@ -12,19 +12,19 @@ const bestProduct = good => {
         <figcaption className="productThumbnail">
             <img src={image} alt="randomProductsThambnails" />
         </figcaption>
-        <div className="productInfo">
+        <section className="productInfo">
           <header>
             <h1>Reebok Track Jacket</h1>
           </header>
-          <div className="productPrice">
-            <div>raiting</div>
-            <p>$100</p>
-            <div className="addTocartBtn">
-              <img src={addToCart} alt="add to cart" />
-              <p>add to card</p>
-            </div>
-          </div>
-        </div>
+          <p className="productPrice">
+            <span>raiting</span>
+            <span>$100</span>
+            <button className="addTocartBtn" onClick={()=>{}}>
+              <img src={addToCart} alt="add to cart" /><span className="icoBtn"></span>
+              add to card
+            </button>
+          </p>
+        </section>
     </article>
   );
 }

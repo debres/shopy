@@ -50,7 +50,8 @@
 	border-bottom: 1px solid #f2f4f7;
 }
 
-.productVariations p {
+.productVariations span {
+	display: block;
 	margin-bottom: 30px;
 	font-size: 14px;
 	font-weight: 400;

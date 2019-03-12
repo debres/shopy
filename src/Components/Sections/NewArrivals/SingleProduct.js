@@ -16,15 +16,24 @@ const singleProduct = good => {
                 <h2 className="productTitle">Reebok Track Jacket</h2>
                 <p className="productPrice">$100</p>
               <section className="productHover">
-                  <div className="productVariations">
-                    <p>sizes: s - m - l - xl</p>
-                    <p>colors</p>
-                  </div>
-                  <div className="productBtns">
-                      <img src={share} alt="share"/>
-                      <img src={addToCard} alt="addToCard"/>
-                      <img src={like} alt="like"/>
-                  </div>
+                  <p className="productVariations">
+                    <span>sizes: s - m - l - xl</span>
+                    <span>colors</span>
+                  </p>
+                  <p className="productBtns">
+                      <button onClick={()=>{}}>
+                        <span className="icoBtn"></span>
+                        share
+                      </button>
+                      <button onClick={()=>{}}>
+                        <span className="icoBtn"></span>
+                        addToCard
+                      </button>
+                      <button onClick={()=>{}}>
+                        <span className="icoBtn"></span>
+                        like
+                      </button>
+                  </p>
               </section>
           </article>);
 }
