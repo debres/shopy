@@ -6,8 +6,6 @@ import Footer from './Components/Footer/Footer';
 import Home from './Components/Pages/Home';
 import Products from './Components/Pages/Products';
 import ProductPage from './Components/Pages/ProductShow';
-import LogIn from './Components/UI/LogIn';
-import SignIn from './Components/UI/SignIn';
 
 
 export default class Layouts extends Component {
@@ -20,8 +18,6 @@ export default class Layouts extends Component {
               <Route path="/hotDeals" component={ProductPage} />
               <Route path="/about" render={() => <div className="container">about</div>} />
               <Route path="/contact" render={() => <div className="container">contact us</div>} />
-              <Route path="/login" component={LogIn} />
-              <Route path="/signin" component={SignIn} />
               <Footer />
             </Fragment>);
   }

@@ -9,25 +9,29 @@ const checkboxWidget = (props) => {
         <h1 className="widgetTitle">Sizes</h1>
         <div className="itemDecorContainer">
           <p className="iputItem">
-            <label><input name="" type="checkbox" />
+            <label className="widgetCheckbox">
+                    <input className="visuallyHidden" name="" type="checkbox" />
                     <span className="checkboxIndicator"></span>
                     s
             </label>
           </p>
           <p className="iputItem">
-            <label><input name="" type="checkbox" />
+            <label className="widgetCheckbox">
+                    <input className="visuallyHidden" name="" type="checkbox" />
                     <span className="checkboxIndicator"></span>
                     s
             </label>
           </p>
           <p className="iputItem">
-            <label><input name="" type="checkbox" />
+            <label className="widgetCheckbox">
+                    <input className="visuallyHidden" name="" type="checkbox" />
                     <span className="checkboxIndicator"></span>
                     s
             </label>
           </p>
           <p className="iputItem">
-            <label><input name="" type="checkbox" />
+            <label className="widgetCheckbox">
+                    <input className="visuallyHidden" name="" type="checkbox" />
                     <span className="checkboxIndicator"></span>
                     s
             </label>

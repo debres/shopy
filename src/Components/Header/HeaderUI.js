@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 
 import RenderChildren from '../UI/RenderChildren';
 //import Modal from '../UI/Modal';
-import Tabs from '../UI/Tabs';
 
 const headerUI = () => {
   return (<div>
@@ -14,7 +13,7 @@ const headerUI = () => {
                   </button></Fragment>)}
             </RenderChildren>
             <RenderChildren>{({load, showMore})=>(<Fragment>
-                  {load && <Tabs />}
+                  {load && <div />}
                   <button onClick={showMore}>
                     <span className="icoBtn"></span>
                     user suite

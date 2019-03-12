@@ -11,10 +11,10 @@ const  adv = (props) => {
                   <h1>full winter kit</h1>
                   <h2>half jacket + skiny trousers + boot leather</h2>
                 </div>
-                <div className="">
-                  <img src={addToCart} alt="addToCart" />
-                  <p>$120</p>
-                </div>
+                <button className="icoBtn" onClick={()=>{}}>
+                  <span className="icoBtnIdicator"></span>
+                  120%
+                </button>
               </article>
               <div className="advRight">
                   <p>adv area</p>

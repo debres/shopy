@@ -6,15 +6,19 @@ import CheckboxWidget from '../Widgets/CheckboxWidget';
 
 const productPage = () => {
   return <Aux>
-           <main className="container">
-           <section>
-            all products
-           </section>
-           <aside>
-            <CategoriesWidget />
-            <CheckboxWidget />
-            <CheckboxWidget />
-           </aside>
+           <main>
+           <div className="container">
+            <div className="productsFlex">
+             <section className="contentFlex">
+              all products
+             </section>
+             <aside className="widgetFlex">
+              <CategoriesWidget />
+              <CheckboxWidget />
+              <CheckboxWidget />
+             </aside>
+            </div>
+           </div>
            </main>
           </Aux>;
 }

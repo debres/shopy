@@ -1,10 +1,39 @@
-.logInForm {
-  width: 285px;
-  min-height: 350px;
-  padding: 15px;
-  box-sizing: border-box;
+.signInForm {
+  width: 570px;
+  background-color: #ffffff;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputField input[type="email"],
+.inputField input[type="password"] {
+  box-sizing: border-box;
+  border: 0;
+  width: 300px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.mailIcon {
+  background-image: url("../../Img/mail.ico");
+  background-position: 0 center;
+  background-repeat: no-repeat;
+}
+
+.passIcon {
+  background-image: url("../../Img/locked.ico");
+  background-position: 0 center;
+  background-repeat: no-repeat;
+}
+
+.logInHelp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .submitBtn {
@@ -16,18 +45,21 @@
 }
 
 .visuallyHidden {
-  visibility: hidden;
+  display: none;
 }
 
 .loginCheckbox {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .loginCheckbox input[type="checkbox"] + .checkboxIndicator {
   position: absolute;
   content: "";
+  left: 0;
   width: 5px;
   height: 5px;
 }

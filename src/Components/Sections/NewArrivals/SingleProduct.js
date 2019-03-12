@@ -1,8 +1,5 @@
 import React from 'react';
 
-import share from '../../../Img/share.ico';
-import addToCard from '../../../Img/addToCart.ico';
-import like from '../../../Img/like.ico';
 import thumbnail from '../../../Img/Product_Im.png';
 
 import './SnigleProduct.css';
@@ -21,8 +18,8 @@ const singleProduct = good => {
                     <span>colors</span>
                   </p>
                   <p className="productBtns">
-                      <button onClick={()=>{}}>
-                        <span className="icoBtn"></span>
+                      <button className="icoBtn" onClick={()=>{}}>
+                        <span className="icoBtnIdicator"></span>
                         share
                       </button>
                       <button onClick={()=>{}}>

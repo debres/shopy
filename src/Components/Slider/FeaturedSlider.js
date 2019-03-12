@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 
 import SlideAdv from './SlideAdv';
-import LogIn from '../UI/LogIn';
-import SignIn from '../UI/SignIn';
 
 export default class FeaturedSlider extends Component {
   render() {
@@ -23,10 +21,7 @@ export default class FeaturedSlider extends Component {
             <SlideAdv index={1} />
           </div>
           <div className="slideAdv">
-            <form className="container UserInfoForm">
-              <LogIn index={2} />
-              <SignIn index={2} />
-            </form>
+            <SlideAdv index={2} />
           </div>
         </Slider>
       </div>

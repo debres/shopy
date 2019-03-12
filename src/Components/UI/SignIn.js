@@ -4,23 +4,28 @@ import './signInLog.css';
 
 const signIn = () => {
   return (<section>
+            <h2>Log in please</h2>
+            <p>Enter your email and password</p>
             <form className="signInForm">
-              <p>
-              <label className="visuallyHidden" htmlFor="email">enter your email</label>
-              <input type="email" placeholder="type your email here" />
+              <p className="inputField">
+                <label className="visuallyHidden" htmlFor="user-login">log in</label>
+                <input className="mailIcon" type="email" placeholder="type your email here" />
               </p>
-              <p>
-              <label className="visuallyHidden" htmlFor="password">enter your password</label>
-              <input type="password" placeholder="type your password here"/>
+              <p className="inputField">
+                <label className="visuallyHidden" htmlFor="user-login">password</label>
+                <input className="passIcon" type="password" placeholder="type your password here" />
               </p>
-              <p>
-              <label className="visuallyHidden" htmlFor="password">confirm your password</label>
-              <input type="password" placeholder="confirm your password here"/>
+              <p className="logInHelp">
+                <label className="loginCheckbox">
+                      <input type="checkbox" className="visuallyHidden" />
+                      <span className="checkboxIndicator"></span>
+                      remember me for Shopy
+                  </label>
+                  <span>forgot your password</span>
               </p>
-              <button className="submitBtn">sign in</button>
-              <button className="submitBtn">close</button>
+              <button className="submitBtn" onClick={()=>{}}>log in</button>
+              <button onClick={()=>{}}>close</button>
             </form>
           </section>);
 }
-
 export default signIn;
