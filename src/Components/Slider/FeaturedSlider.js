@@ -17,11 +17,11 @@ export default class FeaturedSlider extends Component {
     return (
       <div className="containerPropduct">
         <Slider {...settings}>
-          <div className="slideAdv">
-            <SlideAdv index={1} />
+          <div>
+            <SlideAdv/>
           </div>
-          <div className="slideAdv">
-            <SlideAdv index={2} />
+          <div>
+            <SlideAdv/>
           </div>
         </Slider>
       </div>

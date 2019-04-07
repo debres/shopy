@@ -1,0 +1,20 @@
+.singleProduct:hover {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.singleProduct:hover .productTitle {
+	color: #ff5912;
+}
+
+.singleProduct:hover .productPrice {
+	visibility: hidden;
+}
+
+.singleProduct:hover .productHover {
+	visibility: visible;
+	cursor: pointer;
+}
+
+.singleProduct:hover .productImg {
+	max-width: 22%;
+}

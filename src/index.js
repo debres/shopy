@@ -1,23 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+
+import configStore from './ConfigStore/ConfigStore';
+import ErrorBoundry from './Components/ErrorBoundry';
+import { ShopyServiceProvider } from './Components/ShopyServicContext';
+import ShopyService from './Services/ShopyService';
 import Layouts from './Layouts';
 import './reset.css';
 import './index.css';
-//import './gridTest.css';
-//import LogIn from './Components/UI/LogIn.js';
-/*const store = createStore(reducer);
+
+const store = configStore();
+const shopyService = new ShopyService();
 
 const app = (
   <Provider store={store}>
-    <Layouts />
+    <ErrorBoundry>
+      <ShopyServiceProvider value={shopyService}>
+        <BrowserRouter>
+          <Layouts />
+        </BrowserRouter>
+      </ShopyServiceProvider>
+    </ErrorBoundry>
   </Provider>
-)*/
-
-
-const app = (
-    <BrowserRouter>
-      <Layouts/>
-    </BrowserRouter>
 )
 ReactDOM.render(app, document.getElementById('root'));

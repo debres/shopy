@@ -1,0 +1,8 @@
+.bestProduct:hover .productPrice {
+  visibility: hidden;
+}
+
+.bestProduct:hover .addTocartBtn {
+  visibility: visible;
+  cursor: pointer;
+}

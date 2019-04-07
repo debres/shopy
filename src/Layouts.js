@@ -1,24 +1,34 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Route } from 'react-router-dom';
+import styled from 'styled-components';
 
-import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
-import Home from './Components/Pages/Home';
-import Products from './Components/Pages/Products';
-import ProductPage from './Components/Pages/ProductShow';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+//import FeaturedSlider from './Components/Slider/FeaturedSlider';
+import NewArrivals from './Containers/NewArrivals';
+import Adv from './Components/Adv';
+import BestSales from './Containers/BestSales';
+import Subscribe from './Containers/Subscribe';
+import ProductsShow from './Containers/ProductsShow';
 
+const MainContent = styled.main`
+  min-height: 650px;
+  background-color: #f4f6f8;
+`;
 
-export default class Layouts extends Component {
-  render() {
-    return (<Fragment>
+const layouts = () => {
+  return (<Fragment>
+            <MainContent>
               <Header />
-              <Route path="/" exact
-                     component={Home} />
-              <Route path="/products" component={Products} />
-              <Route path="/hotDeals" component={ProductPage} />
-              <Route path="/about" render={() => <div className="container">about</div>} />
-              <Route path="/contact" render={() => <div className="container">contact us</div>} />
+              <Route path="/" component={NewArrivals} exact/>
+              <Route path="/" component={Adv} exact/>
+              <Route path="/" component={BestSales} exact/>
+              <Route path="/" component={Subscribe} exact/>
+              <Route path="/hotDeals" component={ProductsShow}/>
+              <Route path="/products" component={NewArrivals}/>
               <Footer />
-            </Fragment>);
-  }
+            </MainContent>
+          </Fragment>);
 }
+
+export default layouts;
