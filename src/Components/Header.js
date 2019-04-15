@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Logo from './Logo';
-import RenderChildren from './RenderChildren';
 
 import mail from '../Img/mail.ico';
 import phone from '../Img/phone.ico';
@@ -15,7 +14,7 @@ const Header = styled.header`
   background-color: #fff;
 `;
 
-const HeaderFlex = styled.section`
+const FlexContainer = styled.section`
   width: 1170px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -25,26 +24,28 @@ const HeaderFlex = styled.section`
   align-items: center;
 `;
 
-const ContactInfo = styled(HeaderFlex)`
+const ContactInfo = styled(FlexContainer)`
   min-height: 60px;
 `;
 
-const MainHeader = styled(HeaderFlex)`
+const MainHeader = styled(FlexContainer)`
   min-height: 120px;
 `;
 
-const Contacts = styled(HeaderFlex)`
+const FlexUl = styled.ul`
+  display: flex;
+  flex-flow: row npwrap;
+  list-style: none;
+`;
+
+const Contacts = styled(FlexUl)`
   width: 500px;
   margin: auto 0;
 `;
 
-const Socials = styled(HeaderFlex)`
+const Socials = styled(FlexUl)`
   width: 90px;
   margin: auto 0;
-`;
-
-const ContactItem = styled.div`
-
 `;
 
 const MainNav = styled.ul`
@@ -55,6 +56,19 @@ const MainNav = styled.ul`
 `;
 
 const MainNavItem = styled(Link)`
+  display: block;
+  color: #46505a;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:focus, &:hover, &:link, &:active {
+    color: #ff5912;
+  }
+  > li {
+
+  }
+`;
+
+const HeaderBtn = styled(FlexUl)`
 
 `;
 
@@ -62,16 +76,16 @@ const header = () => {
   return (
     <Header>
       <ContactInfo>
-          <Contacts>
-            <ContactItem><img src={mail} alt="mail" />info@shopy.com</ContactItem>
-            <ContactItem><img src={phone} alt="phone" />996 - 5553 - 453</ContactItem>
-          </Contacts>
-          <Socials>
-            <img src={facebook} alt="facebook" />
-            <img src={twitter} alt="twitter" />
-            <img src={google} alt="google" />
-            <img src={instegram} alt="instagram" />
-          </Socials>
+        <Contacts>
+          <li><img src={mail} alt="mail" />info@shopy.com</li>
+          <li><img src={phone} alt="phone" />996 - 5553 - 453</li>
+        </Contacts>
+        <Socials>
+          <li><img src={facebook} alt="facebook" /></li>
+          <li><img src={twitter} alt="twitter" /></li>
+          <li><img src={google} alt="google" /></li>
+          <li><img src={instegram} alt="instagram" /></li>
+        </Socials>
       </ContactInfo>
       <MainHeader>
         <Logo />
@@ -86,23 +100,11 @@ const header = () => {
             </MainNav>
           </nav>
         </menu>
-        <div>
-          <RenderChildren>
-            {({load, showMore})=>(<Fragment>{load && <input  value="search for goods"/>}
-            <button onClick={showMore}><span className="icoBtn"></span>search</button></Fragment>)}
-          </RenderChildren>
-          <RenderChildren>
-            {({load, showMore})=>(<Fragment>{load && <div />}
-            <button onClick={showMore}><span className="icoBtn"></span>user suite</button></Fragment>)}
-          </RenderChildren>
-          <RenderChildren>{({load, showMore})=>(<Fragment>
-            {load && <div>Order dropdown</div>}
-            <button onClick={showMore}>
-            <span className="icoBtn"></span>
-            cart
-            </button></Fragment>)}
-          </RenderChildren>
-        </div>
+        <HeaderBtn>
+          <li><button onClick={()=>{}}><span className="icoBtn"></span>search</button></li>
+          <li><button onClick={()=>{}}><span className="icoBtn"></span>user suite</button></li>
+          <li><button onClick={()=>{}}><span className="icoBtn"></span>cart</button></li>
+        </HeaderBtn>
       </MainHeader>
     </Header>
   );

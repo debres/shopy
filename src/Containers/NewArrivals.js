@@ -44,7 +44,7 @@ class NewArrivals extends Component {
         <SingleProduct />
         <SingleProduct />
         </DecorContainer>
-        <LoadMore>Load more</LoadMore>
+        <LoadMore onClick={()=>{}}>Load more</LoadMore>
       </Ariivals>
     )
   }

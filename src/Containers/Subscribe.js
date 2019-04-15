@@ -20,7 +20,7 @@ class Subscribe extends Component {
           <p>join us now to get all news and special offers</p>
           <p>
             <input className="inputField" type="search" onChange={()=>{}} placeholder="type your email here" />
-            <button className="submitBtn" onSubmit={()=>{}}>join us</button>
+            <button className="submitBtn" onClick={()=>{}}>join us</button>
           </p>
         </SubscribeForm>
     )

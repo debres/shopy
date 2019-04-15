@@ -5,6 +5,7 @@ import logoImg from '../Img/logo.ico';
 
 const ToHome = styled(Link)`
   color: #46505a;
+  text-decoration: none;
 `;
 
 const Logo = styled.h1`
