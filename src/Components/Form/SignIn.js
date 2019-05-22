@@ -2,7 +2,7 @@ import React from 'react';
 
 import './signInLog.css';
 
-const signIn = () => {
+function SignIn() {
   return (<section>
             <h2>Log in please</h2>
             <p>Enter your email and password</p>

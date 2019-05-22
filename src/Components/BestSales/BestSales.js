@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import BestProduct from '../Components/BestProduct';
+import BestProduct from './BestProduct';
 
 const Sales = styled.section`
   width: 1200px;
