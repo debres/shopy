@@ -3,37 +3,34 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import WithShopyConsumer from '../../Hoc/WithShopyConsumer';
 import Logo from '../UI/Logo';
+import contacts from '../UI/array/contacts';
+import socials from '../UI/array/socials';
 
 function Header({ className, context, children }) {
-  const { contacts, socials } = context;
-  console.log("this is the contacts", contacts, 'This is the socials', socials);
   return (
     <header className={className}>
-      <section>
-        <>
+      <p>
           {contacts !== null
-                    ? contacts.map((contact) => {
+                    ? contacts.map((contact, index) => {
                       return (
-                        <p key={contact.index}>
-                          <img src={contact.image} alt/>
-                          <span>{contact.text}</span>
-                        </p>
+                        <li key={index}>
+                          <span>{contact.ico}</span>
+                          <span>{contact.contact}</span>
+                        </li>
                       )
                     })
-                    : <p>contacts</p>}
-        </>
-        <>
+                    : <span>contacts</span>}
         {socials  !== null
-                  ? socials.map((social) => {
+                  ? socials.map((social, index) => {
                     return (
-                      <div key={social.index}>
-                        <img src={social.image}/>
-                      </div>
+                      <li key={index}>
+                        <Link to={social.url}>{social.ico}</Link>
+                      </li>
                     )
                   })
-                  : <p>socials</p>}
-        </>
-      </section>
+                  : <span>socials</span>}
+      </p>
+      <div className="bigHeader">
       <Logo />
       <nav>
         <ul>
@@ -44,8 +41,9 @@ function Header({ className, context, children }) {
           <Link to='/contact'><li>contact</li></Link>
         </ul>
       </nav>
-      <div>
+      <div className="headerBtn">
         {children}
+      </div>
       </div>
     </header>
   );
@@ -53,13 +51,50 @@ function Header({ className, context, children }) {
 
 const StyledHeader = styled(Header)`
   margin: 0 auto;
+  min-height: 180px;
   max-width: 1200px;
   background-color: #fff;
   display:grid;
-  section {
+  p {
+    min-height: 60px;
+    display: flex;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      a {
+        margin-left: 30px;
+        text-decoration: none;
+        color: #34404b;
+        &:hover {
+          color: #ff5912;
+        }
+      }
+    }
+  }
+  .bigHeader {
+    min-height: 120px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    ul {
+    width: 450px;
+    margin-left: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+      a {
+        text-decoration: none;
+        color: #34404b;
+        &:hover {
+          color: #ff5912;
+        }
+      }
+    }
+    p {
+      margin-left: auto;
+    }
   }
 `;
 

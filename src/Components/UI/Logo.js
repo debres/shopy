@@ -5,10 +5,12 @@ import logoImg from '../../Img/logo.ico';
 
 function Logo({ className }) {
   return (
-    <Link to="/" className={className}>
+    <div className={className}>
+      <Link to="/">
         <h1>sh<img src={logoImg} alt="logo"/>py</h1>
-        <p className="logoPhrase">shope any where</p>
-    </Link>
+        <span className="logoPhrase">shope any where</span>
+      </Link>
+    </div>
   );
 }
 
@@ -17,6 +19,19 @@ const StyledLogo = styled(Logo)`
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  color: #34404b;
+  a {
+    text-decoration: none;
+    &:hover {
+      h1 {
+        text-transform: uppercase;
+      }
+      span {
+        opacity: 1;
+      }
+    }
+  }
 `;
 
 export default StyledLogo;

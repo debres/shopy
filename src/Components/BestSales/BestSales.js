@@ -1,43 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import WithShopyConsumer from '../../Hoc/WithShopyConsumer';
+import Headings from '../UI/Headings';
+import BestSalesList from './BestSalesList';
 
-import BestProduct from './BestProduct';
+function BestSales({ className, context }) {
+  const { loading, bestSalesList } = context;
+  return (
+    <article className={className}>
+      <Headings sTitle="best" title="sales" slogan="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+      <BestSalesList bestSalesList={bestSalesList} />
+    </article>
+  )
+}
 
-const Sales = styled.section`
+const StyledBestSales = styled(BestSales)`
   width: 1200px;
-  margin: 0 auto 120px auto;
-  padding: 0 15px;
+  margin: 0 auto;
   box-sizing: border-box;
 `;
 
-const SectionsHeader = styled.hgroup`
-  width: 100%;
-  margin-bottom: 80px;
-  text-align: center;
-`;
-
-const DecorContainer = styled.section`
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-`;
-
-class BestSales extends Component {
-  render() {
-    return (
-      <Sales>
-        <SectionsHeader>
-          <h2>best sales</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, at?</p>
-        </SectionsHeader>
-        <DecorContainer>
-          <BestProduct />
-          <BestProduct />
-          <BestProduct />
-        </DecorContainer>
-      </Sales>
-    )
-  }
-}
-
-export default BestSales;
+export default WithShopyConsumer(StyledBestSales);
